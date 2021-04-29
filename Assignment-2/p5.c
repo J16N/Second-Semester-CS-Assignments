@@ -20,7 +20,7 @@ int main(void) {
     printf(" Operation: "); scanf("%d", &input);
     if (!input) break;
 
-    printf("\n Number: "); scanf("%lf", &num);
+    printf(" Number: "); scanf("%lf", &num);
 
     switch (input) {
       case 1:
@@ -44,7 +44,11 @@ int main(void) {
       case 4:
         printf(" Number: ");
         scanf("%lf", &temp);
-        num /= temp;
+        if (temp) num /= temp;
+        else {
+          printf(" Division by zero is invalid.\n\n");
+          continue;
+        }
         break;
 
       case 5:
@@ -56,14 +60,19 @@ int main(void) {
       case 6:
         printf(" Base: ");
         scanf("%d", &base);
-        num = log10(num) / log10(base);
+        if (base > 1) num = log10(num) / log10(base);
+        else {
+          printf(" The base must be positive real number greater than 1.\n\n");
+          continue;
+        }
         break;
 
       default:
+        printf("\n\n");
         continue;
     }
     printf(" Result: %g", num);
-    if (input != 0) ans += num;
+    ans += num;
     printf("\n\n Final Ans: %g\n\n", ans);
   }
 
