@@ -9,11 +9,11 @@ int main(void) {
   printf("\n ** <3>  Multiplication      **");
   printf("\n ** <4>  Division            **");
   printf("\n ** <5>  Exponentiation      **");
-  printf("\n ** <6>  Logarithm (Base 10) **");
+  printf("\n ** <6>  Logarithm           **");
   printf("\n ** <0>  EXIT                **");
   printf("\n ******************************\n\n");
 
-  int input = 163553;
+  int input = 163553, base = 10;
   double ans = 0, num = 0, temp = 0;
 
   while (input) {
@@ -54,7 +54,9 @@ int main(void) {
         break;
 
       case 6:
-        num = log10(num);
+        printf(" Base: ");
+        scanf("%d", &base);
+        num = log10(num) / log10(base);
         break;
 
       default:
