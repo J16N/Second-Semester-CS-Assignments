@@ -7,7 +7,7 @@ int fact(int n)
 
 int is_strong(int n)
 {
-  if (n == 0) return 1;
+  if (n == 0) return 0;
   int sum = 0, temp = n;
   while (temp > 0)
   {
