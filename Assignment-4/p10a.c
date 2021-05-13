@@ -11,25 +11,16 @@ int main(void)
 
   for (int i = 0, j = 0, k = 0, l = 0; i < max_star;)
   {
-    printf("%d\n", i);
-    printf("%*s *", 
-      !j ? 2 * ((max_star / 2 + 1) - l) : 0, "");
+    printf("%s%*s *%s", !i ? "\n" : "", !j ? 2 * ((max_star / 2 + 1) - l) : 0, 
+      "", !k && i + 1 == max_star ? "\n" : "");
 
     if (j == k)
     {
       printf("\n");
       ++i;
       j = 0;
-      if (i < rows - 1)
-      {
-        k += 2;
-        l += 1;
-      }
-      else
-      {
-        k -= 2;
-        l -= 1;
-      }
+      k = i < rows ? k + 2 : k - 2;
+      l = i < rows ? l + 1 : l - 1;
     }
     else ++j;
   }
