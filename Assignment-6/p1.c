@@ -6,7 +6,7 @@ int main(void)
   printf("\n------ PATTERN - I ------\n");
   
   int rows = 0;
-  printf(" Rows: "); scanf("%d", &rows);
+  printf("\n Rows: "); scanf("%d", &rows);
 
   int space = log10(rows) + 3;
 

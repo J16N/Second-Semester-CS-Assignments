@@ -6,7 +6,7 @@ int main(void)
   printf("\n------ NUMBER TRIANGLE ------\n");
 
   int rows = 0;
-  printf(" Rows: "); scanf("%d", &rows);
+  printf("\n Rows: "); scanf("%d", &rows);
 
   int max_num = 2 * rows - 1;
   int space = log10(max_num) + 3;

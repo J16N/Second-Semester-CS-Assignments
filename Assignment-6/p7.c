@@ -2,12 +2,12 @@
 
 int main(void)
 {
-  printf("\n------ INSERT ELEMENT AT A SPECIFIC POSITION IN AN ARRAY ------\n");
+  printf("\n------ REMOVE ELEMENT FROM A SPECIFIC POSITION IN AN ARRAY ------\n");
 
   int size = 0;
   printf("\n Length of Array: "); scanf("%d", &size);
 
-  int a[size + 1];
+  int a[size];
   printf("\n Enter elements of the array: ");
   for (int i = 0; i < size; ++i)
     scanf("%d", &a[i]);
@@ -17,19 +17,19 @@ int main(void)
     printf("%d, %s", a[i], i == size - 1 ? "]\n" : "");
 
   int pos = 0;
-  printf("\n Enter position (1 - %d): ", size + 1);
+  printf("\n Enter position (1 - %d): ", size);
   scanf("%d", &pos);
 
-  if (pos >= 1 && pos <= size + 1)
+  if (pos >= 1 && pos <= size)
   {
-    int val = 0;
-    printf(" Enter Value: "); scanf("%d", &val);
-
-    size = size + 1;
-    for (int i = size; i > pos - 1; --i)
-      a[i] = a[i - 1];
-    
-    a[pos - 1] = val;
+    size = size - 1;
+    int i = pos - 1;
+    while (i < size)
+    {
+      a[i] = a[i + 1];
+      ++i;
+    }
+    a[i] = 0;
 
     printf("\n Final Array: [ ");
     for (int i = 0; i < size; ++i)
