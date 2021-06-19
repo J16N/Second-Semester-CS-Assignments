@@ -27,7 +27,7 @@ void disp_fibo(int n)
 {
   if (n > 0) 
   {
-    printf(" %d", fibo(n));
+    printf(" %d", fibo(n - 1));
     return disp_fibo(n - 1);
   }
   else printf("\n\n");
