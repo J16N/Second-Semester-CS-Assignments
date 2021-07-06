@@ -43,5 +43,7 @@ int main(void)
   char *str2 = get_string("String-2");
   printf("\n After concatenation: %s\n\n", str_concat(str1, str2));
 
+  free(str1);
+  free(str2);
   return 0;
 }

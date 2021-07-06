@@ -23,5 +23,6 @@ int main(void)
 
   printf("\n Output String: %s\n\n", str);
 
+  free(str);
   return 0;
 }

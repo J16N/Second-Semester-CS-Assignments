@@ -31,6 +31,7 @@ int main(void)
 
   printf("\n Result String: %s\n", str);
   printf(" Total unique vowels: %d\n\n", c_vow);
-
+  
+  free(str);
   return 0;
 }

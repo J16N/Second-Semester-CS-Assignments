@@ -21,6 +21,7 @@ int main(void)
   str[len] = '\0';
 
   printf("\n Result String: %s\n\n", str);
-
+  
+  free(str);
   return 0;
 }

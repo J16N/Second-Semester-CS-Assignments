@@ -15,6 +15,7 @@ int main(void)
 
   printf("\n Last n characters: %s\n\n", last_n_chars(str, n));
 
+  free(str);
   return 0;
 }
 

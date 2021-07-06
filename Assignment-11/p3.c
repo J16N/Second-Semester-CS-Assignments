@@ -16,6 +16,7 @@ int main(void)
   printf("\n Reversed String: %s", reverse_str(str, size));
   printf("\n Palindrome: %s\n\n", is_palindrome(str, size) ? "YES" : "NO");
 
+  free(str);
   return 0;
 }
 
