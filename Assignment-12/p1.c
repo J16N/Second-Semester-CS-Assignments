@@ -13,7 +13,7 @@ MYTIME subtract(MYTIME, MYTIME);
 
 int main(void)
 {
-  printf("\n------ TIME CALCULATION ------\n");
+  printf("\n------ TIME CALCULATOR ------\n");
 
   MYTIME t1, t2, result;
   int hours, minutes, seconds;
