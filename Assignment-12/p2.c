@@ -6,10 +6,10 @@ int main(void)
 {
   printf("\n------ FILE COPIER ------\n");
 
-  FILE *source = fopen("./p2-source.txt", "r"), 
-    *target = fopen("./p2-target.txt", "w+");
+  FILE *source = fopen("./p2_source.txt", "r"), 
+    *target = fopen("./p2_target.txt", "w+");
 
-  if (source && target )
+  if (source && target)
   {
     printf("\n Copying files...");
 
@@ -28,7 +28,7 @@ int main(void)
   }
 
   if (source) fclose(source);
-  if (target) fclose(target);
+  fclose(target);
 
   return 0;
 }

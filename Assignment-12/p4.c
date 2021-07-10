@@ -14,12 +14,20 @@ int main(int argc, char *argv[])
   }
 
   int max = (int) -INFINITY;
-  for (int i = 0; i < argc; ++i)
+  for (int i = 1; i < argc; ++i)
   {
     int num = atoi(argv[i]);
     max = max < num ? num : max;
   }
   
-  printf("\n Largest Number: %d\n\n", max);
+  printf("\n Largest Number: %d", max);
+
+  if (argc == 3)
+  {
+    int a = atoi(argv[2]);
+    int b = atoi(argv[1]);
+    printf("\n Difference: %d ~ %d = %d\n\n", b, a, abs(b - a));
+  }
+
   return 0;
 }
